@@ -2,7 +2,7 @@
 
 client_id = "70183982e9914bf4b2a21999b848ba48"
 name = "pragmatic-outsource-app"
-application_url = "https://affiliated-brush-bristol-planning.trycloudflare.com"
+application_url = "https://built-perhaps-ambien-ky.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,13 +12,13 @@ include_config_on_deploy = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "write_products, write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://affiliated-brush-bristol-planning.trycloudflare.com/auth/callback",
-  "https://affiliated-brush-bristol-planning.trycloudflare.com/auth/shopify/callback",
-  "https://affiliated-brush-bristol-planning.trycloudflare.com/api/auth/callback"
+  "https://built-perhaps-ambien-ky.trycloudflare.com/auth/callback",
+  "https://built-perhaps-ambien-ky.trycloudflare.com/auth/shopify/callback",
+  "https://built-perhaps-ambien-ky.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

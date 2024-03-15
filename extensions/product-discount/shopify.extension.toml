@@ -5,7 +5,6 @@ handle = "product-discount"
 name = "t:name"
 description = "t:description"
 type = "function"
-scopes = "write_products, write_discounts"
 
   [[extensions.targeting]]
   target = "purchase.product-discount.run"
