@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "70183982e9914bf4b2a21999b848ba48"
+name = "pragmatic-outsource-app"
+application_url = "https://affiliated-brush-bristol-planning.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "bossbeanzv2.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://affiliated-brush-bristol-planning.trycloudflare.com/auth/callback",
+  "https://affiliated-brush-bristol-planning.trycloudflare.com/auth/shopify/callback",
+  "https://affiliated-brush-bristol-planning.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
