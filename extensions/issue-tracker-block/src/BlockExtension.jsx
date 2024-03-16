@@ -23,7 +23,7 @@ export default reactExtension(TARGET, () => <App />);
 const PAGE_SIZE = 3;
 
 function App() {
-  const { data, i18n } = useApi(TARGET);
+  const { navigation, data, i18n } = useApi(TARGET);
   const [loading, setLoading] = useState(true);
   const [initialValues, setInitialValues] = useState([]);
   const [issues, setIssues] = useState([]);
@@ -49,7 +49,7 @@ function App() {
         setIssues(parsedIssues);
       }
     })();
-  }, [productId]);
+  }, []);
 
   const paginatedIssues = useMemo(() => {
     if (issuesCount <= PAGE_SIZE) {
@@ -62,7 +62,7 @@ function App() {
       (currentPage - 1) * PAGE_SIZE,
       currentPage * PAGE_SIZE,
     );
-  }, [issuesCount, issues, currentPage]);
+  }, [issues, currentPage]);
 
   const handleChange = async (id, value) => {
     // Update the local state of the extension to reflect changes
@@ -109,7 +109,6 @@ function App() {
       // Translate the block title with the i18n API, which uses the strings in the locale files
       title={i18n.translate("name")}
     >
-      <Text>Issues</Text>
       <Form id={`issues-form`} onSubmit={onSubmit} onReset={onReset}>
         {issues.length ? (
           <>
@@ -154,7 +153,22 @@ function App() {
                           />
                         </Box>
                         <Box inlineSize="25%">
-                          <InlineStack inlineSize="100%" inlineAlignment="end">
+                          <InlineStack
+                            inlineSize="100%"
+                            blockAlignment="center"
+                            inlineAlignment="end"
+                            gap="base"
+                          >
+                            <Button
+                              variant="tertiary"
+                              onPress={() =>
+                                navigation?.navigate(
+                                  `extension:issue-tracker-action?issueId=${id}`,
+                                )
+                              }
+                            >
+                              <Icon name="EditMinor" />
+                            </Button>
                             <Button
                               onPress={() => handleDelete(id)}
                               variant="tertiary"
@@ -169,6 +183,16 @@ function App() {
                 );
               },
             )}
+            <Divider />
+            <Box paddingBlockStart="base">
+              <Button
+                onPress={() =>
+                  navigation?.navigate(`extension:issue-tracker-action`)
+                }
+              >
+                Add issue
+              </Button>
+            </Box>
             <InlineStack
               paddingBlockStart="large"
               blockAlignment="center"
@@ -200,6 +224,13 @@ function App() {
             <Box paddingBlockEnd="large">
               <Text fontWeight="bold">No issues for this product</Text>
             </Box>
+            <Button
+              onPress={() =>
+                navigation?.navigate(`extension:issue-tracker-action`)
+              }
+            >
+              Add your first issue
+            </Button>
           </>
         )}
       </Form>
