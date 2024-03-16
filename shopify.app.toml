@@ -2,7 +2,7 @@
 
 client_id = "70183982e9914bf4b2a21999b848ba48"
 name = "pragmatic-outsource-app"
-application_url = "https://basic-mardi-training-deposit.trycloudflare.com"
+application_url = "https://comply-contained-detect-trader.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = "write_discounts,write_products"
 
 [auth]
 redirect_urls = [
-  "https://basic-mardi-training-deposit.trycloudflare.com/auth/callback",
-  "https://basic-mardi-training-deposit.trycloudflare.com/auth/shopify/callback",
-  "https://basic-mardi-training-deposit.trycloudflare.com/api/auth/callback"
+  "https://comply-contained-detect-trader.trycloudflare.com/auth/callback",
+  "https://comply-contained-detect-trader.trycloudflare.com/auth/shopify/callback",
+  "https://comply-contained-detect-trader.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
