@@ -1,4 +1,3 @@
 {
-  "name": "issue-tracker-action",
-  "welcome": "Bienvenue dans l'extension {{TARGET}}!"
+  "name": "Créer un problème"
 }
