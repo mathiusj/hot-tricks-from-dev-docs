@@ -2,7 +2,7 @@
 
 client_id = "44bbb44225b104c4930a5d283e3c94c5"
 name = "hot-tricks-from-dev-docs"
-application_url = "https://consideration-schema-you-patient.trycloudflare.com"
+application_url = "https://ghost-nissan-showing-sufficiently.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,9 +12,9 @@ include_config_on_deploy = true
 
 [auth]
 redirect_urls = [
-  "https://consideration-schema-you-patient.trycloudflare.com/auth/callback",
-  "https://consideration-schema-you-patient.trycloudflare.com/auth/shopify/callback",
-  "https://consideration-schema-you-patient.trycloudflare.com/api/auth/callback"
+  "https://ghost-nissan-showing-sufficiently.trycloudflare.com/auth/callback",
+  "https://ghost-nissan-showing-sufficiently.trycloudflare.com/auth/shopify/callback",
+  "https://ghost-nissan-showing-sufficiently.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
