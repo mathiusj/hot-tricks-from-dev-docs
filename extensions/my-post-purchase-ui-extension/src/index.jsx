@@ -18,7 +18,7 @@ import {
 
 // For local development, replace APP_URL with your local tunnel URL.
 const APP_URL =
-  "https://draft-payday-si-pregnancy.trycloudflare.com/extensions/e9ac15a3-fcce-425b-bb52-e6473b36e486";
+  "https://limited-interpretation-temperatures-approaches.trycloudflare.com/extensions/e9ac15a3-fcce-425b-bb52-e6473b36e486";
 
 // Preload data from your app server to ensure that the extension loads quickly.
 extend(
