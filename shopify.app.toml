@@ -2,7 +2,7 @@
 
 client_id = "44bbb44225b104c4930a5d283e3c94c5"
 name = "hot-tricks-from-dev-docs"
-application_url = "https://vast-false-blessed-affected.trycloudflare.com"
+application_url = "https://draft-payday-si-pregnancy.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,9 +12,9 @@ include_config_on_deploy = true
 
 [auth]
 redirect_urls = [
-  "https://vast-false-blessed-affected.trycloudflare.com/auth/callback",
-  "https://vast-false-blessed-affected.trycloudflare.com/auth/shopify/callback",
-  "https://vast-false-blessed-affected.trycloudflare.com/api/auth/callback"
+  "https://draft-payday-si-pregnancy.trycloudflare.com/auth/callback",
+  "https://draft-payday-si-pregnancy.trycloudflare.com/auth/shopify/callback",
+  "https://draft-payday-si-pregnancy.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
