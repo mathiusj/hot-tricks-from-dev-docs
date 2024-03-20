@@ -10,8 +10,8 @@ const OFFERS = [
     discountedPrice: "699.95",
     changes: [
       {
-        type: "add_variant",
-        variantID: 8355095937307, // Replace with the variant ID.
+        type: "ProductVariant",
+        variantID: 45459880608027, // Replace with the variant ID.
         quantity: 1,
         discount: {
           value: 15,
