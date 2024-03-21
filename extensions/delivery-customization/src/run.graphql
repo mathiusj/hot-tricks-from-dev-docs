@@ -12,7 +12,7 @@ query RunInput {
   }
   deliveryCustomization {
     metafield(
-      namespace: "delivery-customization"
+      namespace: "$app:delivery-customization"
       key: "function-configuration"
     ) {
       value
