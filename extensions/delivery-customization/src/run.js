@@ -21,7 +21,7 @@ export function run(input) {
     .filter(
       (group) =>
         group.deliveryAddress?.provinceCode &&
-        group.deliveryAddress.provinceCode == "NC",
+        group.deliveryAddress.provinceCode == "AB",
     )
     // Collect the delivery options from these groups
     .flatMap((group) => group.deliveryOptions)
