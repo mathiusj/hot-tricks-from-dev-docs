@@ -1,22 +1,7 @@
-import {
-  Banner,
-  useApi,
-  useTranslate,
-  reactExtension,
-} from '@shopify/ui-extensions-react/checkout';
+import { reactExtension } from "@shopify/ui-extensions-react/checkout";
 
-export default reactExtension(
-  'purchase.checkout.block.render',
-  () => <Extension />,
-);
+import Extension from "./Extension.jsx";
 
-function Extension() {
-  const translate = useTranslate();
-  const { extension } = useApi();
-
-  return (
-    <Banner title="custom-header">
-      {translate('welcome', {target: extension.target})}
-    </Banner>
-  );
-}
+export default reactExtension("purchase.checkout.header.render-after", () => (
+  <Extension />
+));
