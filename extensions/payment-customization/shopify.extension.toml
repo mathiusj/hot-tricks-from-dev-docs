@@ -16,5 +16,6 @@ type = "function"
   path = "dist/function.wasm"
 
   [extensions.ui.paths]
-  create = "/"
-  details = "/"
+  create = "/app/payment-customization/:functionId/new"
+  details = "/app/payment-customization/:functionId/:id"
+
