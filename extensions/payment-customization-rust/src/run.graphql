@@ -1,0 +1,7 @@
+query Input {
+  paymentCustomization {
+    metafield(namespace: "$app:payment-customization-rust", key: "function-configuration") {
+      value
+    }
+  }
+}
