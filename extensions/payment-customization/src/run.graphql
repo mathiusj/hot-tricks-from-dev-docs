@@ -10,4 +10,12 @@ query RunInput {
     id
     name
   }
+  paymentCustomization {
+    metafield(
+      namespace: "payment-customization"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
 }
