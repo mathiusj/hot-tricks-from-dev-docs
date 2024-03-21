@@ -1,54 +1,32 @@
 use shopify_function::prelude::*;
 use shopify_function::Result;
 
-use serde::{Deserialize, Serialize};
-
-#[derive(Serialize, Deserialize, Default, PartialEq)]
-#[serde(rename_all(deserialize = "camelCase"))]
-struct Configuration {}
-
-impl Configuration {
-    fn from_str(value: &str) -> Self {
-        serde_json::from_str(value).expect("Unable to parse configuration value from metafield")
-    }
-}
-
+// The configured entrypoint for the 'purchase.payment-customization.run' extension target
 #[shopify_function_target(query_path = "src/run.graphql", schema_path = "schema.graphql")]
 fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     let no_changes = output::FunctionRunResult { operations: vec![] };
 
-    let _config = match input.payment_customization.metafield {
-        Some(input::InputPaymentCustomizationMetafield { value }) => {
-            Configuration::from_str(&value)
-        }
-        None => return Ok(no_changes),
-    };
-
-    Ok(output::FunctionRunResult { operations: vec![] })
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use shopify_function::{run_function_with_input, Result};
-
-    #[test]
-    fn test_result_contains_no_operations() -> Result<()> {
-        use run::output::*;
-
-        let result = run_function_with_input(
-            run,
-            r#"
-                {
-                    "paymentCustomization": {
-                        "metafield": null
-                    }
-                }
-            "#,
-        )?;
-        let expected = FunctionRunResult { operations: vec![] };
-
-        assert_eq!(result, expected);
-        Ok(())
+    // Get the cart total from the function input, and return early if it's below 100
+    let cart_total: f64 = input.cart.cost.total_amount.amount.into();
+    if cart_total < 100.0 {
+        // You can use STDERR for debug logs in your function
+        eprintln!("Cart total is not high enough, no need to hide the payment method.");
+        return Ok(no_changes);
     }
+
+    // Find the payment method to hide, and create a hide output operation from it
+    // (this will be None if not found)
+    let operations = input
+        .payment_methods
+        .iter()
+        .find(|&method| method.name.contains(&"Cash on Delivery".to_string()))
+        .map(|method| {
+            vec![output::Operation::Hide(output::HideOperation {
+                payment_method_id: method.id.to_string(),
+            })]
+        })
+        .unwrap_or_default();
+
+    // The shopify_function crate serializes your function result and writes it to STDOUT
+    Ok(output::FunctionRunResult { operations })
 }
