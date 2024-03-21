@@ -2,7 +2,7 @@
 
 client_id = "44bbb44225b104c4930a5d283e3c94c5"
 name = "hot-tricks-from-dev-docs"
-application_url = "https://examines-kinase-investing-lithuania.trycloudflare.com"
+application_url = "https://shopify.dev/apps/default-app-home"
 embedded = true
 
 [build]
@@ -10,12 +10,12 @@ automatically_update_urls_on_dev = true
 dev_store_url = "bossbeanzv2.myshopify.com"
 include_config_on_deploy = true
 
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_products,write_discounts,write_discounts_allocator_functions,write_products"
+
 [auth]
-redirect_urls = [
-  "https://examines-kinase-investing-lithuania.trycloudflare.com/auth/callback",
-  "https://examines-kinase-investing-lithuania.trycloudflare.com/auth/shopify/callback",
-  "https://examines-kinase-investing-lithuania.trycloudflare.com/api/auth/callback"
-]
+redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
 [webhooks]
 api_version = "2024-01"
