@@ -19,9 +19,9 @@ export = "purchaseCheckoutShippingOptionListRenderAfter"
 # [END order-status.config-extension]
 
 
-# [[extensions.metafields]]
-# namespace = "my-namespace"
-# key = "my-key"
+[[extensions.metafields]]
+namespace = "deliveryMethods"
+key = "deliverySchedule"
 
 # Read more on extension settings at https://shopify.dev/api/checkout-extensions/checkout/configuration
 # [settings]

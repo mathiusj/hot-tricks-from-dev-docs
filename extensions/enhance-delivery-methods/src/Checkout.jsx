@@ -25,7 +25,7 @@ export default function Extension() {
   const applyMetafieldsChange = useApplyMetafieldsChange();
 
   // Define the metafield namespace and key
-  const metafieldNamespace = "yourAppNamespace";
+  const metafieldNamespace = "deliveryMethods";
   const metafieldKey = "deliverySchedule";
 
   // Sets the selected date to today, unless today is Sunday, then it sets it to tomorrow
