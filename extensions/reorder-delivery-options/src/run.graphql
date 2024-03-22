@@ -1,7 +1,13 @@
 query RunInput {
-  deliveryCustomization {
-    metafield(namespace: "$app:reorder-delivery-options", key: "function-configuration") {
-      value
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        provinceCode
+      }
+      deliveryOptions {
+        handle
+        title
+      }
     }
   }
 }
