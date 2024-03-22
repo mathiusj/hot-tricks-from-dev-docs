@@ -7,8 +7,8 @@ block_progress = true
 
 [[extensions]]
 type = "ui_extension"
-name = "checkout-ui"
-handle = "checkout-ui"
+name = "enhance-delivery-methods"
+handle = "enhance-delivery-methods"
 
 # [START order-status.config-extension]
 [[extensions.targeting]]

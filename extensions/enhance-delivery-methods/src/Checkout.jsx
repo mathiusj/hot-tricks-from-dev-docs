@@ -45,20 +45,17 @@ export default function Extension() {
   }, []);
 
   // Set a function to handle the Date Picker component's onChange event
-  const handleChangeDate = useCallback(
-    (selectedDate) => {
-      setSelectedDate(selectedDate);
-      // Apply the change to the metafield
-      applyMetafieldsChange({
-        type: "updateMetafield",
-        namespace: metafieldNamespace,
-        key: metafieldKey,
-        valueType: "string",
-        value: selectedDate,
-      });
-    },
-    [applyMetafieldsChange],
-  );
+  const handleChangeDate = useCallback((selectedDate) => {
+    setSelectedDate(selectedDate);
+    // Apply the change to the metafield
+    applyMetafieldsChange({
+      type: "updateMetafield",
+      namespace: metafieldNamespace,
+      key: metafieldKey,
+      valueType: "string",
+      value: selectedDate,
+    });
+  }, []);
 
   // Boolean to check if Express is selected
   const isExpressSelected = () => {
