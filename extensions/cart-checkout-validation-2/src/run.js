@@ -9,15 +9,17 @@
  * @param {RunInput} input
  * @returns {FunctionRunResult}
  */
-export function run(input) {
-  const errors = input.cart.lines
-    .filter(({ quantity }) => quantity > 1)
+export function run({ cart }) {
+  const errors = cart.lines
+    .filter(({ quantity }) => {
+      return quantity > 1;
+    })
     .map(() => ({
-      localizedMessage: "Not possible to order more than one of each",
+      localizedMessage: "Not possible to order more than 1",
       target: "cart",
     }));
 
   return {
-    errors
-  }
-};
+    errors,
+  };
+}
