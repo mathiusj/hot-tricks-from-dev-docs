@@ -1,21 +1,21 @@
 api_version = "2024-01"
 
 [[extensions]]
-handle = "cart-checkout-validation-2"
+handle = "demo-cart-transform-extension"
 name = "t:name"
 description = "t:description"
 type = "function"
 
   [[extensions.targeting]]
-  target = "purchase.validation.run"
+  target = "purchase.cart-transform.run"
   input_query = "src/run.graphql"
   export = "run"
 
   [extensions.build]
-  command = ""
-  path = "dist/function.wasm"
+  command = "cargo wasi build --release"
+  path = "target/wasm32-wasi/release/demo-cart-transform-extension.wasm"
+  watch = [ "src/**/*.rs" ]
 
   [extensions.ui.paths]
   create = "/"
   details = "/"
-

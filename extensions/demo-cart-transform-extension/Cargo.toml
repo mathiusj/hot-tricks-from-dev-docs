@@ -1,0 +1,17 @@
+[package]
+name = "demo-cart-transform-extension"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.62"
+
+[dependencies]
+serde = { version = "1.0.13", features = ["derive"] }
+serde_with = "1.13.0"
+serde_json = "1.0"
+shopify_function = "0.7.0"
+graphql_client = "0.13.0"
+
+[profile.release]
+lto = true
+opt-level = 's'
+strip = true

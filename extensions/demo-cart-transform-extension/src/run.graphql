@@ -1,0 +1,20 @@
+query Input {
+  cart {
+    lines {
+      id
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          component_reference: metafield(
+            namespace: "custom"
+            key: "component_reference"
+          ) {
+            value
+          }
+        }
+      }
+    }
+  }
+}
