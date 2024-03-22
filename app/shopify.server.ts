@@ -26,8 +26,40 @@ const shopify = shopifyApp({
     },
   },
   hooks: {
-    afterAuth: async ({ session }) => {
+    afterAuth: async ({ session, admin }) => {
       shopify.registerWebhooks({ session });
+
+      const definition = {
+        access: {
+          admin: "MERCHANT_READ_WRITE",
+        },
+        key: "my-configuration-key",
+        name: "Validation Configuration",
+        namespace: "$app:my-validation-namespace",
+        ownerType: "VALIDATION",
+        type: "json",
+      };
+
+      await admin.graphql(
+        `#graphql
+        mutation CreateMetafieldDefinition($definition: MetafieldDefinitionInput!) {
+          metafieldDefinitionCreate(definition: $definition) {
+            createdDefinition {
+              id
+            }
+            userErrors {
+              field
+              message
+              code
+            }
+          }
+        }`,
+        {
+          variables: {
+            definition,
+          },
+        },
+      );
     },
   },
   future: {
