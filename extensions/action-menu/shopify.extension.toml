@@ -19,8 +19,8 @@ module = "./src/MenuActionExtension.tsx"
 target = "customer-account.order.action.menu-item.render"
 
 [[extensions.targeting]]
-module = "./src/FullPageExtension.tsx"
-target = "customer-account.page.render"
+module = "./src/MenuActionModalExtension.tsx"
+target = "customer-account.order.action.render"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
