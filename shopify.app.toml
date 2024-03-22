@@ -3,7 +3,7 @@
 client_id = "755ffc4f46928602fc63d026b7633bbc"
 name = "hot-tricks-from-dev-docs"
 handle = "hot-tricks-from-dev-docs"
-application_url = "https://intelligent-notre-beach-intervention.trycloudflare.com"
+application_url = "https://watershed-operator-salvador-drives.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_products,write_cart_transforms,write_delivery_customizations,writ
 
 [auth]
 redirect_urls = [
-  "https://intelligent-notre-beach-intervention.trycloudflare.com/auth/callback",
-  "https://intelligent-notre-beach-intervention.trycloudflare.com/auth/shopify/callback",
-  "https://intelligent-notre-beach-intervention.trycloudflare.com/api/auth/callback"
+  "https://watershed-operator-salvador-drives.trycloudflare.com/auth/callback",
+  "https://watershed-operator-salvador-drives.trycloudflare.com/auth/shopify/callback",
+  "https://watershed-operator-salvador-drives.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
