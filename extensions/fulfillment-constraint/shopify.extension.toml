@@ -1,7 +1,7 @@
 api_version = "2024-01"
 
 [[extensions]]
-handle = "my-fulfillment-constraint-function"
+handle = "fulfillment-constraint"
 name = "t:name"
 description = "t:description"
 type = "function"

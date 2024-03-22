@@ -1,0 +1,20 @@
+query RunInput {
+  cart {
+    deliverableLines {
+      id
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          product {
+            hasAnyTag(tags: ["Promotional candle"])
+          }
+        }
+      }
+    }
+  }
+  locations(names: ["Ottawa Store"]) {
+    id
+    name
+  }
+}
