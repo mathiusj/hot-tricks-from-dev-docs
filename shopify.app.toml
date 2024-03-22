@@ -3,7 +3,7 @@
 client_id = "755ffc4f46928602fc63d026b7633bbc"
 name = "hot-tricks-from-dev-docs"
 handle = "hot-tricks-from-dev-docs"
-application_url = "https://bytes-toolbox-w-alone.trycloudflare.com"
+application_url = "https://gym-mice-ss-compliant.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_merchant_managed_fulfillment_orders,read_orders,read_products,wri
 
 [auth]
 redirect_urls = [
-  "https://bytes-toolbox-w-alone.trycloudflare.com/auth/callback",
-  "https://bytes-toolbox-w-alone.trycloudflare.com/auth/shopify/callback",
-  "https://bytes-toolbox-w-alone.trycloudflare.com/api/auth/callback"
+  "https://gym-mice-ss-compliant.trycloudflare.com/auth/callback",
+  "https://gym-mice-ss-compliant.trycloudflare.com/auth/shopify/callback",
+  "https://gym-mice-ss-compliant.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

@@ -14,13 +14,10 @@ handle = "loyalty-order-status-block"
 # and the file that contains your extension’s source code. Learn more:
 # https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/extension-targets-overview
 
-[[extensions.targeting]]
-module = "./src/MenuActionExtension.jsx"
-target = "customer-account.order.action.menu-item.render"
 
 [[extensions.targeting]]
-module = "./src/FullPageExtension.jsx"
-target = "customer-account.page.render"
+module = "./src/PointsBlockExtension.jsx"
+target = "customer-account.order-status.block.render"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
