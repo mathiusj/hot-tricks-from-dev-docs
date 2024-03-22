@@ -1,7 +1,14 @@
 query RunInput {
   cart {
-    lines {
-      quantity
+    buyerIdentity {
+      customer {
+        numberOfOrders
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
     }
   }
 }
