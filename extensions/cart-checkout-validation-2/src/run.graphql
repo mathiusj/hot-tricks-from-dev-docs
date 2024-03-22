@@ -3,11 +3,21 @@ query RunInput {
     lines {
       quantity
       merchandise {
-        __typename
         ... on ProductVariant {
           id
+          product {
+            title
+          }
         }
       }
+    }
+  }
+  validation {
+    metafield(
+      namespace: "$app:my-validation-namespace"
+      key: "my-configuration-key"
+    ) {
+      value
     }
   }
 }
