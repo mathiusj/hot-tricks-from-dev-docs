@@ -2,7 +2,7 @@ api_version = "2024-01"
 
 [[extensions]]
 handle = "reorder-delivery-options"
-name = "t:name"
+name = "reorder-delivery-options"
 description = "t:description"
 type = "function"
 
