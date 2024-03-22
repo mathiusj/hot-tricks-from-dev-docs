@@ -7,7 +7,7 @@ query RunInput {
         ... on ProductVariant {
           id
           product {
-            hasAnyTag(tags: ["Promotional candle"])
+            hasAnyTag(tags: ["Cool Snowboard"])
           }
         }
       }

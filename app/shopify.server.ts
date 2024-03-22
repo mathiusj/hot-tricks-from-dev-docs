@@ -30,27 +30,28 @@ const shopify = shopifyApp({
       shopify.registerWebhooks({ session });
 
       const definition = {
-        access: {
-          admin: "MERCHANT_READ_WRITE",
-        },
-        key: "my-configuration-key",
-        name: "Validation Configuration",
-        namespace: "$app:my-validation-namespace",
-        ownerType: "VALIDATION",
-        type: "json",
+        functionId: "9402a558-c918-485c-a6fe-7f55128abc27",
+        metafields: [
+          {
+            id: "gid://shopify/Product/10079785100",
+            key: "fulfillment-constraint",
+            namespace: "$app:fulfillment-constraint",
+            type: "cool-snowboard",
+            value: "3",
+          },
+        ],
       };
 
       await admin.graphql(
         `#graphql
-        mutation CreateMetafieldDefinition($definition: MetafieldDefinitionInput!) {
-          metafieldDefinitionCreate(definition: $definition) {
-            createdDefinition {
-              id
+        mutation fulfillmentConstraintRuleCreate($functionId: String!) {
+          fulfillmentConstraintRuleCreate(functionId: $functionId) {
+            fulfillmentConstraintRule {
+              # FulfillmentConstraintRule fields
             }
             userErrors {
               field
               message
-              code
             }
           }
         }`,
