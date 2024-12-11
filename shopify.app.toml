@@ -3,7 +3,7 @@
 client_id = "9ce44668598513b59e4b672aff9ccb33"
 name = "kitchen-sink"
 handle = "kitchen-sink-7"
-application_url = "https://banners-disagree-relation-farms.trycloudflare.com"
+application_url = "https://discovered-interval-lewis-nelson.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://banners-disagree-relation-farms.trycloudflare.com/auth/callback",
-  "https://banners-disagree-relation-farms.trycloudflare.com/auth/shopify/callback",
-  "https://banners-disagree-relation-farms.trycloudflare.com/api/auth/callback"
+  "https://discovered-interval-lewis-nelson.trycloudflare.com/auth/callback",
+  "https://discovered-interval-lewis-nelson.trycloudflare.com/auth/shopify/callback",
+  "https://discovered-interval-lewis-nelson.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
