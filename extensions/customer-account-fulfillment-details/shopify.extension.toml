@@ -6,8 +6,8 @@
 api_version = "2024-10"
 
 [[extensions]]
-name = "customer-account-order-status"
-handle = "customer-account-order-status"
+name = "account-fulfillment-details"
+handle = "account-fulfillment-details"
 type = "ui_extension"
 
 
@@ -16,8 +16,8 @@ type = "ui_extension"
 # https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/extension-targets-overview
 
 [[extensions.targeting]]
-module = "./src/PointsBlockExtension.tsx"
-target = "customer-account.order-status.block.render"
+module = "./src/FulfillmentDelivery.tsx"
+target = "customer-account.order-status.fulfillment-details.render-after"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
