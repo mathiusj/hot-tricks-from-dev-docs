@@ -3,7 +3,7 @@
 client_id = "9ce44668598513b59e4b672aff9ccb33"
 name = "kitchen-sink"
 handle = "kitchen-sink-7"
-application_url = "https://discovered-interval-lewis-nelson.trycloudflare.com"
+application_url = "https://faster-collecting-gbp-oxide.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,13 +12,13 @@ dev_store_url = "quickstart-3a22a586.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "unauthenticated_read_customers,unauthenticated_write_customers,read_products,write_products,read_draft_orders,write_draft_orders"
 
 [auth]
 redirect_urls = [
-  "https://discovered-interval-lewis-nelson.trycloudflare.com/auth/callback",
-  "https://discovered-interval-lewis-nelson.trycloudflare.com/auth/shopify/callback",
-  "https://discovered-interval-lewis-nelson.trycloudflare.com/api/auth/callback"
+  "https://faster-collecting-gbp-oxide.trycloudflare.com/auth/callback",
+  "https://faster-collecting-gbp-oxide.trycloudflare.com/auth/shopify/callback",
+  "https://faster-collecting-gbp-oxide.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

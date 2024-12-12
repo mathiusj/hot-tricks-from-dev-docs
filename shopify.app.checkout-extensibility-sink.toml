@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "03ff5fde021020694157da7ba4a35d1c"
+name = "checkout-extensibility-sink"
+handle = "checkout-extensibility-sink"
+application_url = "https://lack-rear-uses-informed.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "checkout-extensibility-sink.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "unauthenticated_read_customers,unauthenticated_write_customers,read_products,write_products,read_draft_orders,write_draft_orders"
+
+[auth]
+redirect_urls = [
+  "https://lack-rear-uses-informed.trycloudflare.com/auth/callback",
+  "https://lack-rear-uses-informed.trycloudflare.com/auth/shopify/callback",
+  "https://lack-rear-uses-informed.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
