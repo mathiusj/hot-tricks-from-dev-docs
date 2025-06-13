@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "normalized_at": "2025-06-13T12:00:00Z",
+    "total_contributions": 16,
+    "contribution_types": {
+      "repositories": 4,
+      "pull_requests": 2,
+      "issues": 0,
+      "pr_reviews": 0
+    }
+  },
+  "contributions": [
+    {
+      "type": "repository",
+      "title": "hot-tricks-from-dev-docs",
+      "description": "Practice working with dev doc tutorials to build cool extensions and other functionality 🔥 For context.",
+      "url": "https://github.com/mathiusj/hot-tricks-from-dev-docs",
+      "created_at": "2024-03-15T22:33:52Z",
+      "updated_at": "2024-12-12T08:21:43Z",
+      "stars": null,
+      "language": null,
+      "is_fork": false,
+      "topics": []
+    },
+    {
+      "type": "repository",
+      "title": "tcp-server",
+      "description": null,
+      "url": "https://github.com/mathiusj/tcp-server",
+      "created_at": "2025-01-09T19:56:52Z",
+      "updated_at": "2025-01-09T19:56:57Z",
+      "stars": null,
+      "language": null,
+      "is_fork": false,
+      "topics": []
+    },
+    {
+      "type": "repository",
+      "title": "bossbeanz-storefront",
+      "description": null,
+      "url": "https://github.com/mathiusj/bossbeanz-storefront",
+      "created_at": "2024-08-30T19:31:14Z",
+      "updated_at": "2024-08-30T19:31:29Z",
+      "stars": null,
+      "language": null,
+      "is_fork": false,
+      "topics": []
+    },
+    {
+      "type": "repository",
+      "title": "calc",
+      "description": null,
+      "url": "https://github.com/mathiusj/calc",
+      "created_at": "2025-01-09T06:00:28Z",
+      "updated_at": "2025-01-09T06:34:48Z",
+      "stars": null,
+      "language": null,
+      "is_fork": false,
+      "topics": []
+    },
+    {
+      "type": "pull_request",
+      "title": "refactor: cleanup create actions integration tests discount details",
+      "body": "### TL;DR\n\nRefactored discount tests to use direct GraphQL mocks instead of helper utilities.\n\n### What changed?\n\n- Replaced the generic `createDiscountGraphQlClient` and `getExpectedMutation` utilities with direct GraphQL mocks using `fillGraphQL`\n- Moved the `fillBxgyDiscountFields` helper function from the test file to a utility file\n- Updated GraphQL operation expectations to directly reference the mutation documents\n- Added specific mock responses for each discount type with proper GIDs and structure\n\n### How to test?\n\n1. Run the test suite for the discount components:\n   ```\n   dev test app/sections/Discounts/DiscountDetails/tests\n   ```\n2. Verify that all tests pass and correctly validate the GraphQL operations\n\n### Why make this change?\n\nThis change improves test clarity and maintainability by:\n- Eliminating indirection through multiple utility functions\n- Making test expectations more explicit by directly referencing GraphQL documents\n- Making it easier to understand what each test is validating without having to trace through multiple helper functions\n\nThe refactored approach makes it clearer what GraphQL operations are being tested and what responses are expected, which will make future maintenance easier.",
+      "url": "https://github.com/shop/world/pull/75321",
+      "created_at": "2025-06-11T16:57:49Z",
+      "closed_at": null,
+      "state": "open",
+      "repository": "world",
+      "labels": ["//areas/clients/admin-web", "Slice: discounts-section"]
+    },
+    {
+      "type": "pull_request",
+      "title": "feat: roast architecture improvements",
+      "body": null,
+      "url": "https://github.com/shopify-playground/growth-catalyst/pull/1",
+      "created_at": "2025-06-10T21:32:56Z",
+      "closed_at": "2025-06-10T21:33:59Z",
+      "state": "closed",
+      "repository": "growth-catalyst",
+      "labels": []
+    }
+  ]
+}
